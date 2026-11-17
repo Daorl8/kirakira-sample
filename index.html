@@ -38,6 +38,7 @@
 <style>
 @font-face{ font-family:"KK Display"; font-weight:400 600; font-display:swap; src:url("kk-playfair.woff2") format("woff2"); }
 @font-face{ font-family:"KK Display"; font-style:italic; font-weight:400 600; font-display:swap; src:url("kk-playfair-i.woff2") format("woff2"); }
+@font-face{ font-family:"KK Round"; font-weight:400; font-display:swap; src:url("kk-gowun.woff2") format("woff2"); }
 @font-face{ font-family:"KK Sans"; font-weight:300 700; font-display:swap; src:url("kk-pretendard.woff2") format("woff2"); }
 
 /* 로고의 홀로그램(핑크 → 라벤더 → 하늘)을 가는 선 · 별 · 버튼 테두리 포인트로만. 넓은 면은 흰색, 네일 사진이 주인공 */
@@ -52,6 +53,7 @@
   --holo:linear-gradient(100deg,#F7B6D2 0%,#CDB8F4 50%,#A8D8F6 100%);
   --r:2px;
   --display:"KK Display","KK Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --round:"KK Round","KK Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --sans:"KK Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 *{ box-sizing:border-box; margin:0; padding:0; }
@@ -91,7 +93,7 @@ a{ color:inherit; }
 .sec{ padding:104px 0; }
 .sec.alt{ background:var(--bg2); }
 .en{ display:inline-flex; align-items:center; gap:8px; font-family:var(--display); font-style:italic; font-size:1.02rem; color:var(--acc); }
-h2{ font-weight:600; font-size:clamp(1.55rem, 4.4vw, 2.3rem); line-height:1.4; letter-spacing:-.02em; margin-top:10px; }
+h2{ font-family:var(--round); font-weight:400; font-synthesis:none; font-size:clamp(1.55rem, 4.4vw, 2.3rem); line-height:1.4; letter-spacing:-.02em; margin-top:10px; }
 .lead{ color:var(--soft); margin-top:14px; max-width:36em; }
 
 /* 히어로 */
@@ -99,7 +101,7 @@ h2{ font-weight:600; font-size:clamp(1.55rem, 4.4vw, 2.3rem); line-height:1.4; l
 .hero::before{ content:""; position:absolute; width:560px; height:560px; right:-160px; top:-120px; background:radial-gradient(closest-side, rgba(205,184,244,.42), rgba(168,216,246,.18) 60%, rgba(255,255,255,0)); pointer-events:none; }
 .hero .wrap{ position:relative; display:grid; gap:40px; align-items:center; }
 .hero .logo{ width:150px; mix-blend-mode:multiply; }
-.hero h1{ font-weight:700; font-size:clamp(2rem, 6.4vw, 3.3rem); line-height:1.25; letter-spacing:-.03em; margin-top:18px; }
+.hero h1{ font-family:var(--round); font-weight:400; font-synthesis:none; font-size:clamp(2rem, 6.4vw, 3.3rem); line-height:1.25; letter-spacing:-.03em; margin-top:18px; }
 .hero .sub{ color:var(--soft); font-size:clamp(1rem, 2.6vw, 1.15rem); margin-top:12px; }
 .hero .cats{ margin-top:6px; font-weight:600; color:var(--acc); letter-spacing:.02em; }
 .chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; list-style:none; }
@@ -139,7 +141,7 @@ h2{ font-weight:600; font-size:clamp(1.55rem, 4.4vw, 2.3rem); line-height:1.4; l
 @media (min-width:900px){ .chart{ grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:56px; } }
 
 /* 가격 */
-.menu{ display:grid; gap:16px; margin-top:40px; }
+.menu{ display:grid; gap:16px; margin-top:40px; align-items:start; }
 .mcard{ background:#FFFFFF; border-radius:var(--r); border:1px solid var(--line); padding:26px 22px; position:relative; overflow:hidden; }
 .mcard::before{ content:""; position:absolute; left:0; right:0; top:0; height:3px; background:var(--holo); }
 .mcard h3{ font-family:var(--display); font-weight:500; font-size:1.35rem; display:flex; align-items:center; gap:8px; }
@@ -324,6 +326,15 @@ h2{ font-weight:600; font-size:clamp(1.55rem, 4.4vw, 2.3rem); line-height:1.4; l
           <div class="ph"><img src="kk-lash.webp" alt="속눈썹 연장 시술 후 눈매 클로즈업" width="675" height="900" loading="lazy" /></div>
         </article>
         <article class="mcard reveal">
+          <h3>Brow · Care <small>눈썹 · 관리</small></h3>
+          <ul>
+            <li><span>눈썹디자인</span><b class="v">변동</b></li>
+            <li><span>앰플샷</span><b class="v">변동</b></li>
+            <li><span>SMP</span><b class="v">변동</b></li>
+          </ul>
+          <div class="ph"><img src="kk-brow.webp" alt="눈썹 디자인 전후 비교" width="895" height="900" loading="lazy" /></div>
+        </article>
+        <article class="mcard reveal">
           <h3>Lash perm <span class="star" aria-hidden="true"></span></h3>
           <ul>
             <li><span>영양클리닉펌</span><b>35,000원</b></li>
@@ -337,15 +348,6 @@ h2{ font-weight:600; font-size:clamp(1.55rem, 4.4vw, 2.3rem); line-height:1.4; l
             <li><span>하드/소프트 왁싱</span><b class="v">변동</b></li>
             <li><span>슈가링왁싱</span><b class="v">변동</b></li>
           </ul>
-        </article>
-        <article class="mcard reveal">
-          <h3>Brow · Care <small>눈썹 · 관리</small></h3>
-          <ul>
-            <li><span>눈썹디자인</span><b class="v">변동</b></li>
-            <li><span>앰플샷</span><b class="v">변동</b></li>
-            <li><span>SMP</span><b class="v">변동</b></li>
-          </ul>
-          <div class="ph"><img src="kk-brow.webp" alt="눈썹 디자인 전후 비교" width="895" height="900" loading="lazy" /></div>
         </article>
         <article class="mcard reveal">
           <h3>Tanning <small>태닝</small></h3>
