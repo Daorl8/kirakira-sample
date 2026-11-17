@@ -163,6 +163,15 @@ h2{ font-weight:600; font-size:clamp(1.55rem, 4.4vw, 2.3rem); line-height:1.4; l
 .notice p{ color:var(--soft); margin-top:4px; font-size:.95rem; }
 @media (min-width:900px){ .notice{ grid-template-columns:repeat(3, minmax(0,1fr)); } }
 
+.howto{ margin-top:12px; padding:22px; border:1.5px solid transparent; border-radius:var(--r); background-image:linear-gradient(#FFFFFF,#FFFFFF),var(--holo); background-origin:border-box; background-clip:padding-box,border-box; }
+.howto b{ font-weight:600; }
+.howto ol{ list-style:none; counter-reset:h; display:grid; gap:6px; margin-top:12px; }
+.howto li{ counter-increment:h; display:flex; gap:10px; }
+.howto li::before{ content:counter(h); font-family:var(--display); color:var(--acc); min-width:1.2em; }
+.howto p{ margin-top:12px; color:var(--soft); }
+.howto a{ color:var(--ink); text-underline-offset:3px; }
+@media (min-width:900px){ .howto ol{ grid-template-columns:repeat(4, minmax(0,1fr)); } }
+
 /* 오시는 길 */
 .visit-grid{ display:grid; gap:28px; margin-top:40px; }
 .info{ border-top:1px solid var(--ink); }
@@ -248,6 +257,7 @@ h2{ font-weight:600; font-size:clamp(1.55rem, 4.4vw, 2.3rem); line-height:1.4; l
     <div class="wrap">
       <span class="en reveal"><span class="star" aria-hidden="true"></span>Total Beauty</span>
       <h2 id="promise-h" class="reveal">깔끔함.유지력.섬세함의 정착지</h2>
+      <p class="lead reveal">네일 · 왁싱 · 태닝 · 속눈썹 · 반영구 · SMP · 앰플시술 · 타투 까지 한 곳에서 끝!</p>
       <ul class="promise">
         <li class="reveal"><span class="star" aria-hidden="true"></span>1:1 맞춤 프라이빗 네일</li>
         <li class="reveal"><span class="star" aria-hidden="true"></span>바디 왁싱 전문</li>
@@ -322,7 +332,7 @@ h2{ font-weight:600; font-size:clamp(1.55rem, 4.4vw, 2.3rem); line-height:1.4; l
           </ul>
         </article>
         <article class="mcard reveal">
-          <h3>Waxing <small>왁싱</small></h3>
+          <h3>Waxing <small>브라질리언·전신 왁싱 전문</small></h3>
           <ul>
             <li><span>하드/소프트 왁싱</span><b class="v">변동</b></li>
             <li><span>슈가링왁싱</span><b class="v">변동</b></li>
@@ -356,6 +366,16 @@ h2{ font-weight:600; font-size:clamp(1.55rem, 4.4vw, 2.3rem); line-height:1.4; l
         <div class="reveal"><b>100%예약제</b><p>예약 및 상담문의 @kirakira._official 프로필하단 링크 클릭 또는 DM</p></div>
         <div class="reveal"><b>노쇼 안내</b><p>당일 직전취소 및 변경은 예약금이 환불되지 않습니다!</p></div>
         <div class="reveal"><b>심야 예약</b><p>8시이후 예약은 심야할증 1만원추가!</p></div>
+      </div>
+      <div class="howto reveal">
+        <b>예약 방법</b>
+        <ol>
+          <li>시술 종류</li>
+          <li>희망 날짜·시간</li>
+          <li>젤제거 여부 (네일 시)</li>
+          <li>희망하는 디자인 있으면 첨부</li>
+        </ol>
+        <p>DM / 전화: <a href="tel:050714387565" class="nw">0507-1438-7565</a></p>
       </div>
     </div>
   </section>
