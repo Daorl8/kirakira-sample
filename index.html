@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>키라키라 뷰티스튜디오 KIRAKIRA | 일산 네일 · 왁싱 · 속눈썹 · 태닝</title>
+<meta name="description" content="일산 정발산역 키라키라 뷰티스튜디오. 네일 왁싱 태닝 속눈썹 체형관리 토탈 뷰티 전문샵/ 깔끔함.유지력.섬세함의 정착지. 경기 고양시 일산동구 중앙로1261번길 17 206호." />
+<link rel="canonical" href="https://kirakira-sample.lgt3232.workers.dev/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:site_name" content="키라키라 뷰티스튜디오" />
+<meta property="og:title" content="키라키라 · 토탈 뷰티 전문샵" />
+<meta property="og:description" content="1:1 맞춤 프라이빗 네일 · 바디 왁싱 전문 · 속눈썹 · 태닝 · 일산 정발산" />
+<meta property="og:url" content="https://kirakira-sample.lgt3232.workers.dev/" />
+<meta property="og:image" content="https://kirakira-sample.lgt3232.workers.dev/og-kk.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#FFFFFF" />
+<link rel="icon" href="favicon.png" type="image/png" />
+<!-- 시안 도메인 = kirakira-sample.lgt3232.workers.dev. 고객 인계 시 grep lgt3232 → canonical·og:url·og:image·JSON-LD url/image 치환 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NailSalon",
+  "name": "키라키라 뷰티스튜디오",
+  "url": "https://kirakira-sample.lgt3232.workers.dev/",
+  "image": "https://kirakira-sample.lgt3232.workers.dev/og-kk.jpg",
+  "telephone": "+82-507-1438-7565",
+  "address": { "@type": "PostalAddress", "streetAddress": "중앙로1261번길 17 206호", "addressLocality": "고양시 일산동구", "addressRegion": "경기도", "addressCountry": "KR" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "21:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/kirakira._official/", "https://m.place.naver.com/place/2097671533/home"]
+}
+</script>
+<style>
+@font-face{ font-family:"KK Display"; font-weight:400 600; font-display:swap; src:url("kk-playfair.woff2") format("woff2"); }
+@font-face{ font-family:"KK Display"; font-style:italic; font-weight:400 600; font-display:swap; src:url("kk-playfair-i.woff2") format("woff2"); }
+@font-face{ font-family:"KK Sans"; font-weight:300 700; font-display:swap; src:url("kk-pretendard.woff2") format("woff2"); }
+
+/* 로고의 홀로그램(핑크 → 라벤더 → 하늘)을 가는 선 · 별 · 버튼 테두리 포인트로만. 넓은 면은 흰색, 네일 사진이 주인공 */
+:root{
+  --bg:#FFFFFF;
+  --bg2:#F8F6FB;
+  --ink:#24212A;
+  --soft:#5E5966;
+  --mute:#6E6977;
+  --acc:#7A57A8;
+  --line:#E7E2EE;
+  --holo:linear-gradient(100deg,#F7B6D2 0%,#CDB8F4 50%,#A8D8F6 100%);
+  --r:14px;
+  --display:"KK Display","KK Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --sans:"KK Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; scroll-padding-top:116px; -webkit-text-size-adjust:100%; }
+body{ font-family:var(--sans); color:var(--ink); background:var(--bg); line-height:1.75; font-size:16px; -webkit-font-smoothing:antialiased; word-break:keep-all; overflow-wrap:break-word; }
+img{ max-width:100%; height:auto; display:block; }
+a{ color:inherit; }
+:focus-visible{ outline:2px solid var(--ink); outline-offset:3px; }
+.wrap{ width:min(100% - 40px, 1140px); margin-inline:auto; }
+.nw{ white-space:nowrap; }
+.star{ display:inline-block; width:.8em; height:.8em; background:var(--holo); clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%); vertical-align:-.05em; }
+
+/* 헤더 */
+.top{ position:sticky; top:0; z-index:50; background:rgba(255,255,255,.96); border-bottom:1px solid var(--line); }
+.top::after{ content:""; position:absolute; left:0; right:0; bottom:-1px; height:1px; background:var(--holo); opacity:.8; }
+.top .bar{ display:flex; align-items:center; justify-content:space-between; gap:16px; height:66px; }
+.brand{ display:flex; align-items:center; gap:10px; text-decoration:none; }
+.brand b{ font-family:var(--display); font-weight:500; font-size:1.25rem; letter-spacing:.24em; }
+.nav{ display:none; gap:28px; font-size:.92rem; }
+.nav a{ text-decoration:none; color:var(--soft); }
+.top .btn{ min-height:40px; padding:0 18px; font-size:.86rem; }
+.snav{ display:flex; gap:2px; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; border-top:1px solid var(--line); padding:0 12px; }
+.snav::-webkit-scrollbar{ display:none; }
+.snav a{ flex:0 0 auto; display:flex; align-items:center; min-height:44px; padding:0 12px; font-size:.9rem; text-decoration:none; color:var(--soft); white-space:nowrap; }
+.snav a:first-child{ margin-left:auto; } .snav a:last-child{ margin-right:auto; }
+@media (min-width:900px){ .nav{ display:flex; } .snav{ display:none; } html{ scroll-padding-top:74px; } .top .bar{ display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); } .top .bar .btn{ justify-self:end; } }
+@media (max-width:899px){ .top .btn{ display:none; } }
+@media (hover:hover){ .nav a:hover, .snav a:hover{ color:var(--ink); } }
+
+/* 버튼: 채움 = 잉크, 테두리 = 홀로그램 */
+.btn{ position:relative; display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:50px; padding:0 24px; border-radius:999px; text-decoration:none; font-weight:600; font-size:.95rem; color:var(--ink); background:#FFFFFF; border:1.5px solid transparent; background-image:linear-gradient(#FFFFFF,#FFFFFF),var(--holo); background-origin:border-box; background-clip:padding-box,border-box; transition:transform .1s, box-shadow .25s; }
+.btn.fill{ background:var(--ink); background-image:none; border-color:var(--ink); color:#FFFFFF; }
+.btn:active{ transform:scale(.98); }
+@media (hover:hover){ .btn:hover{ box-shadow:0 6px 20px rgba(205,184,244,.55); } }
+
+/* 공통 */
+.sec{ padding:104px 0; }
+.sec.alt{ background:var(--bg2); }
+.en{ display:inline-flex; align-items:center; gap:8px; font-family:var(--display); font-style:italic; font-size:1.02rem; color:var(--acc); }
+h2{ font-weight:600; font-size:clamp(1.55rem, 4.4vw, 2.3rem); line-height:1.4; letter-spacing:-.02em; margin-top:10px; }
+.lead{ color:var(--soft); margin-top:14px; max-width:36em; }
+
+/* 히어로 */
+.hero{ position:relative; overflow:hidden; padding:48px 0 84px; }
+.hero::before{ content:""; position:absolute; width:560px; height:560px; right:-160px; top:-120px; background:radial-gradient(closest-side, rgba(205,184,244,.42), rgba(168,216,246,.18) 60%, rgba(255,255,255,0)); pointer-events:none; }
+.hero .wrap{ position:relative; display:grid; gap:40px; align-items:center; }
+.hero .logo{ width:150px; mix-blend-mode:multiply; }
+.hero h1{ font-weight:700; font-size:clamp(2rem, 6.4vw, 3.3rem); line-height:1.25; letter-spacing:-.03em; margin-top:18px; }
+.hero .sub{ color:var(--soft); font-size:clamp(1rem, 2.6vw, 1.15rem); margin-top:12px; }
+.hero .cats{ margin-top:6px; font-weight:600; color:var(--acc); letter-spacing:.02em; }
+.chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; list-style:none; }
+.chips li{ padding:7px 14px; border-radius:999px; background:var(--bg2); font-size:.9rem; font-weight:500; }
+.hero figure{ position:relative; margin:0; justify-self:center; width:100%; max-width:480px; }
+.hero figure .ph{ overflow:hidden; border-radius:var(--r); aspect-ratio:4/5; box-shadow:0 30px 60px rgba(122,87,168,.18); }
+.hero figure img{ width:100%; height:100%; object-fit:cover; }
+.hero figure .s1, .hero figure .s2{ position:absolute; background:var(--holo); clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%); }
+.hero figure .s1{ width:58px; height:58px; left:-18px; top:24px; }
+.hero figure .s2{ width:30px; height:30px; right:-10px; bottom:46px; }
+.cta3{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:28px; max-width:560px; }
+.cta3 .btn:first-child{ grid-column:1 / -1; }
+@media (max-width:439px){ .cta3{ grid-template-columns:minmax(0,1fr); } }
+@media (min-width:640px){ .cta3{ display:flex; flex-wrap:wrap; } }
+@media (min-width:900px){ .hero{ padding:64px 0 108px; } .hero .wrap{ grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:72px; } }
+
+/* 약속 */
+.promise{ list-style:none; display:grid; gap:12px; margin-top:40px; }
+.promise li{ display:flex; gap:14px; align-items:flex-start; padding:20px 22px; background:#FFFFFF; border-radius:var(--r); border:1px solid var(--line); font-size:1.02rem; font-weight:500; }
+.promise li .star{ flex:0 0 auto; width:18px; height:18px; margin-top:4px; }
+@media (min-width:768px){ .promise{ grid-template-columns:repeat(2, minmax(0,1fr)); } }
+
+/* 네일 갤러리 (사장님 콜라주 감성: 크기 다른 타일) */
+.gal{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:40px; }
+.gal figure{ margin:0; overflow:hidden; border-radius:var(--r); aspect-ratio:1/1; background:var(--bg2); }
+.gal figure.t{ aspect-ratio:3/4; }
+.gal figure.w{ grid-column:1 / -1; aspect-ratio:16/10; position:relative; }
+.gal figure.w img{ position:absolute; inset:0; }
+.gal img{ width:100%; height:100%; object-fit:cover; transition:transform 1s ease; }
+@media (hover:hover){ .gal figure:hover img{ transform:scale(1.04); } }
+@media (min-width:900px){ .gal{ grid-template-columns:repeat(4, minmax(0,1fr)); gap:14px; } .gal figure.w{ grid-column:span 2; grid-row:span 2; aspect-ratio:auto; } .gal figure.t{ aspect-ratio:1/1; } }
+.chart{ display:grid; gap:24px; margin-top:56px; align-items:center; }
+.chart figure{ margin:0; overflow:hidden; border-radius:var(--r); }
+.chart ul{ list-style:none; margin-top:16px; }
+.chart li{ padding:12px 0; border-bottom:1px solid var(--line); }
+.chart li:first-child{ border-top:1px solid var(--line); }
+@media (min-width:900px){ .chart{ grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:56px; } }
+
+/* 가격 */
+.menu{ display:grid; gap:16px; margin-top:40px; }
+.mcard{ background:#FFFFFF; border-radius:var(--r); border:1px solid var(--line); padding:26px 22px; position:relative; overflow:hidden; }
+.mcard::before{ content:""; position:absolute; left:0; right:0; top:0; height:3px; background:var(--holo); }
+.mcard h3{ font-family:var(--display); font-weight:500; font-size:1.35rem; display:flex; align-items:center; gap:8px; }
+.mcard h3 small{ font-family:var(--sans); font-size:.85rem; font-weight:500; color:var(--mute); }
+.mcard ul{ list-style:none; margin-top:14px; }
+.mcard li{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:11px 0; border-bottom:1px dashed var(--line); }
+.mcard li:last-child{ border-bottom:0; }
+.mcard li span{ min-width:0; }
+.mcard li b{ font-weight:600; white-space:nowrap; font-variant-numeric:tabular-nums; }
+.mcard li b.v{ font-weight:500; color:var(--mute); }
+.mcard .ph{ margin-top:16px; overflow:hidden; border-radius:10px; aspect-ratio:16/9; }
+.mcard .ph img{ width:100%; height:100%; object-fit:cover; }
+@media (min-width:768px){ .menu{ grid-template-columns:repeat(2, minmax(0,1fr)); } }
+@media (min-width:1080px){ .menu{ grid-template-columns:repeat(3, minmax(0,1fr)); } }
+.menu-note{ margin-top:20px; color:var(--soft); font-size:.92rem; }
+
+/* 예약 안내 */
+.notice{ display:grid; gap:12px; margin-top:36px; }
+.notice div{ padding:20px 22px; border-radius:var(--r); background:var(--bg2); }
+.notice b{ display:block; font-weight:600; }
+.notice p{ color:var(--soft); margin-top:4px; font-size:.95rem; }
+@media (min-width:900px){ .notice{ grid-template-columns:repeat(3, minmax(0,1fr)); } }
+
+/* 오시는 길 */
+.visit-grid{ display:grid; gap:28px; margin-top:40px; }
+.info{ border-top:1px solid var(--ink); }
+.info > div{ display:grid; grid-template-columns:84px minmax(0,1fr); gap:14px; padding:15px 0; border-bottom:1px solid var(--line); font-size:.95rem; }
+.info dt{ color:var(--mute); }
+.info small{ display:block; color:var(--soft); font-size:.88rem; }
+.info a{ text-underline-offset:3px; }
+.visit .cta{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:22px; }
+.visit .cta .btn:first-child{ grid-column:1 / -1; }
+@media (max-width:439px){ .visit .cta{ grid-template-columns:minmax(0,1fr); } }
+.map{ width:100%; height:280px; border:0; border-radius:var(--r); background:var(--bg2); display:block; }
+@media (min-width:768px){ .visit .cta{ display:flex; flex-wrap:wrap; } .map{ height:400px; } }
+@media (min-width:1000px){ .visit-grid{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:48px; } }
+
+/* 푸터 */
+.foot{ border-top:1px solid var(--line); padding:52px 0 124px; font-size:.9rem; color:var(--soft); }
+.foot .logo{ width:84px; mix-blend-mode:multiply; }
+.foot p{ margin-top:14px; }
+.foot p + p{ margin-top:6px; }
+.foot a{ color:var(--ink); text-underline-offset:3px; }
+@media (min-width:900px){ .foot{ padding-bottom:52px; } }
+
+/* 모바일 하단 바 */
+.quick{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:6px; padding:8px 10px calc(8px + env(safe-area-inset-bottom)); background:#FFFFFF; border-top:1px solid var(--line); }
+.quick a{ display:flex; align-items:center; justify-content:center; min-height:48px; border-radius:999px; font-size:.86rem; font-weight:600; text-decoration:none; text-align:center; border:1.5px solid transparent; background-image:linear-gradient(#FFFFFF,#FFFFFF),var(--holo); background-origin:border-box; background-clip:padding-box,border-box; }
+.quick a.fill{ background:var(--ink); background-image:none; border-color:var(--ink); color:#FFFFFF; }
+@media (min-width:900px){ .quick{ display:none; } }
+
+/* 나타나기 (모션 강제 재생 · 다올 방침) */
+.js .reveal{ opacity:0; transform:translateY(16px); transition:opacity .9s ease var(--d,0s), transform .9s ease var(--d,0s); }
+.js .reveal.in{ opacity:1; transform:none; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="키라키라 처음으로"><span class="star" aria-hidden="true"></span><b>KIRAKIRA</b></a>
+    <nav class="nav" aria-label="섹션">
+      <a href="#promise">소개</a>
+      <a href="#nail">네일</a>
+      <a href="#price">가격</a>
+      <a href="#notice">예약 안내</a>
+      <a href="#visit">오시는 길</a>
+    </nav>
+    <a class="btn fill" href="https://m.place.naver.com/place/2097671533/ticket" target="_blank" rel="noopener">네이버 예약</a>
+  </div>
+  <nav class="snav" aria-label="섹션 바로가기">
+    <a href="#promise">소개</a>
+    <a href="#nail">네일</a>
+    <a href="#price">가격</a>
+    <a href="#notice">예약 안내</a>
+    <a href="#visit">오시는 길</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <img class="logo" src="kk-logo.webp" alt="KIRAKIRA TOTAL BEAUTY STUDIO" width="361" height="390" />
+        <h1>키라키라 <span class="nw">뷰티스튜디오</span></h1>
+        <p class="sub">토탈 뷰티 전문샵/ 깔끔함.유지력.섬세함의 정착지</p>
+        <p class="cats">네일 왁싱 태닝 속눈썹 체형관리</p>
+        <ul class="chips">
+          <li>1:1 프라이빗 리클라이너 시술</li>
+          <li>100%예약제</li>
+        </ul>
+        <div class="cta3">
+          <a class="btn fill" href="https://m.place.naver.com/place/2097671533/ticket" target="_blank" rel="noopener">네이버 예약</a>
+          <a class="btn" href="tel:050714387565">전화 <span class="nw">0507-1438-7565</span></a>
+          <a class="btn" href="https://www.instagram.com/kirakira._official/" target="_blank" rel="noopener">인스타그램 DM</a>
+        </div>
+      </div>
+      <figure>
+        <div class="ph"><img src="kk-hero.webp" alt="핑크빛 그라데이션과 리본 포인트 네일" width="1100" height="1100" fetchpriority="high" /></div>
+        <span class="s1" aria-hidden="true"></span><span class="s2" aria-hidden="true"></span>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec alt" id="promise" aria-labelledby="promise-h">
+    <div class="wrap">
+      <span class="en reveal"><span class="star" aria-hidden="true"></span>Total Beauty</span>
+      <h2 id="promise-h" class="reveal">깔끔함.유지력.섬세함의 정착지</h2>
+      <ul class="promise">
+        <li class="reveal"><span class="star" aria-hidden="true"></span>1:1 맞춤 프라이빗 네일</li>
+        <li class="reveal"><span class="star" aria-hidden="true"></span>바디 왁싱 전문</li>
+        <li class="reveal"><span class="star" aria-hidden="true"></span>자연스러운 태닝 컬러 &amp; 건강한 피부톤</li>
+        <li class="reveal"><span class="star" aria-hidden="true"></span>섬세하고 꼼꼼한 속눈썹</li>
+        <li class="reveal"><span class="star" aria-hidden="true"></span>청결/위생 최우선 + 높은 퀄리티로 완성!</li>
+        <li class="reveal"><span class="star" aria-hidden="true"></span>쌩얼도 자신있게</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="nail" aria-labelledby="nail-h">
+    <div class="wrap">
+      <span class="en reveal"><span class="star" aria-hidden="true"></span>Nail</span>
+      <h2 id="nail-h" class="reveal">1:1 맞춤 프라이빗 네일</h2>
+      <div class="gal">
+        <figure class="w reveal"><img src="kk-n1.webp" alt="연한 핑크 프렌치 네일" width="1100" height="1100" loading="lazy" /></figure>
+        <figure class="reveal"><img src="kk-n3.webp" alt="누디 핑크 하트 포인트 네일" width="934" height="1000" loading="lazy" /></figure>
+        <figure class="reveal"><img src="kk-n2.webp" alt="청록 컬러 페디큐어" width="900" height="900" loading="lazy" /></figure>
+        <figure class="reveal"><img src="kk-n4.webp" alt="자연스러운 누드톤 원컬러 네일" width="1000" height="1000" loading="lazy" /></figure>
+        <figure class="reveal"><img src="kk-n5.webp" alt="실버 자석젤 포인트 네일" width="997" height="1000" loading="lazy" /></figure>
+        <figure class="t reveal"><img src="kk-n8.webp" alt="버건디와 밀키 화이트 조합 네일" width="750" height="1000" loading="lazy" /></figure>
+        <figure class="t reveal"><img src="kk-n9.webp" alt="연핑크 리본 아트 네일" width="748" height="1000" loading="lazy" /></figure>
+        <figure class="reveal"><img src="kk-n7.webp" alt="그레이 라인 아트 네일" width="1000" height="1000" loading="lazy" /></figure>
+        <figure class="reveal"><img src="kk-n6.webp" alt="밀키 화이트 원컬러 네일" width="750" height="1000" loading="lazy" /></figure>
+      </div>
+      <div class="chart">
+        <figure class="reveal"><img src="kk-chart.webp" alt="여러 가지 아트가 붙은 네일 팁 차트판" width="993" height="1100" loading="lazy" /></figure>
+        <div class="reveal">
+          <span class="en"><span class="star" aria-hidden="true"></span>Art Chart</span>
+          <h2>차트판에 있는 모든 아트 가능</h2>
+          <ul>
+            <li>파츠비용만 별도</li>
+            <li>희망하시는 아트 DM주시면 가격 안내드려용</li>
+            <li>타샵제거후 젤시술은 제거비가 없어용 <span class="nw">(파츠제거 별도)</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt" id="price" aria-labelledby="price-h">
+    <div class="wrap">
+      <span class="en reveal"><span class="star" aria-hidden="true"></span>Price</span>
+      <h2 id="price-h" class="reveal">가격표</h2>
+      <div class="menu">
+        <article class="mcard reveal">
+          <h3>Nail <span class="star" aria-hidden="true"></span></h3>
+          <ul>
+            <li><span>네일 원컬러</span><b>35,000원</b></li>
+            <li><span>네일 그라데이션</span><b>45,000원</b></li>
+            <li><span>네일 프렌치</span><b>50,000원</b></li>
+          </ul>
+          <div class="ph"><img src="kk-n10.webp" alt="실버 크롬 페디큐어" width="1000" height="580" loading="lazy" /></div>
+        </article>
+        <article class="mcard reveal">
+          <h3>Lash extension <span class="star" aria-hidden="true"></span></h3>
+          <ul>
+            <li><span>클래식연장</span><b>50,000원</b></li>
+            <li><span>디자인연장</span><b>60,000원</b></li>
+            <li><span>펌포인트연장</span><b>70,000원</b></li>
+            <li><span>연장제거</span><b>20,000원</b></li>
+          </ul>
+          <div class="ph"><img src="kk-lash.webp" alt="속눈썹 연장 시술 후 눈매 클로즈업" width="675" height="900" loading="lazy" /></div>
+        </article>
+        <article class="mcard reveal">
+          <h3>Lash perm <span class="star" aria-hidden="true"></span></h3>
+          <ul>
+            <li><span>영양클리닉펌</span><b>35,000원</b></li>
+            <li><span>블랙틴팅펌</span><b>35,000원</b></li>
+            <li><span>디자인펌</span><b>30,000원</b></li>
+          </ul>
+        </article>
+        <article class="mcard reveal">
+          <h3>Waxing <small>왁싱</small></h3>
+          <ul>
+            <li><span>하드/소프트 왁싱</span><b class="v">변동</b></li>
+            <li><span>슈가링왁싱</span><b class="v">변동</b></li>
+          </ul>
+        </article>
+        <article class="mcard reveal">
+          <h3>Brow · Care <small>눈썹 · 관리</small></h3>
+          <ul>
+            <li><span>눈썹디자인</span><b class="v">변동</b></li>
+            <li><span>앰플샷</span><b class="v">변동</b></li>
+            <li><span>SMP</span><b class="v">변동</b></li>
+          </ul>
+          <div class="ph"><img src="kk-brow.webp" alt="눈썹 디자인 전후 비교" width="895" height="900" loading="lazy" /></div>
+        </article>
+        <article class="mcard reveal">
+          <h3>Tanning <small>태닝</small></h3>
+          <ul>
+            <li><span>태닝</span><b class="v">변동</b></li>
+          </ul>
+        </article>
+      </div>
+      <p class="menu-note reveal"><span>"변동" 항목은 상담 후 안내해 드려요.</span> <span>희망하시는 아트 DM주시면 가격 안내드려용</span></p>
+    </div>
+  </section>
+
+  <section class="sec" id="notice" aria-labelledby="notice-h">
+    <div class="wrap">
+      <span class="en reveal"><span class="star" aria-hidden="true"></span>Booking</span>
+      <h2 id="notice-h" class="reveal">예약 안내</h2>
+      <div class="notice">
+        <div class="reveal"><b>100%예약제</b><p>예약 및 상담문의 @kirakira._official 프로필하단 링크 클릭 또는 DM</p></div>
+        <div class="reveal"><b>노쇼 안내</b><p>당일 직전취소 및 변경은 예약금이 환불되지 않습니다!</p></div>
+        <div class="reveal"><b>심야 예약</b><p>8시이후 예약은 심야할증 1만원추가!</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt visit" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <span class="en reveal"><span class="star" aria-hidden="true"></span>Visit</span>
+      <h2 id="visit-h" class="reveal">오시는 길</h2>
+      <div class="visit-grid">
+        <div class="reveal">
+          <dl class="info">
+            <div><dt>주소</dt><dd>경기 고양시 일산동구 <span class="nw">중앙로1261번길 17</span> 206호<small>라고프라자</small></dd></div>
+            <div><dt>찾아가는 길</dt><dd>라고프라자 206호 입니다. 벧엘교회 주차장 입구 옆건물입니다<small>정발산역 1번 출구에서 168m</small></dd></div>
+            <div><dt>영업</dt><dd>월 - 토 <span class="nw">10:00 - 21:00</span><small><span class="nw">정기휴무 (매주 일요일)</span></small></dd></div>
+            <div><dt>주차</dt><dd>주차 가능</dd></div>
+            <div><dt>전화</dt><dd><a href="tel:050714387565" class="nw">0507-1438-7565</a></dd></div>
+          </dl>
+          <div class="cta">
+            <a class="btn fill" href="https://m.place.naver.com/place/2097671533/ticket" target="_blank" rel="noopener">네이버 예약</a>
+            <a class="btn" href="https://map.naver.com/p/entry/place/2097671533" target="_blank" rel="noopener">네이버 길찾기</a>
+            <a class="btn" href="https://www.instagram.com/kirakira._official/" target="_blank" rel="noopener">인스타그램 DM</a>
+          </div>
+        </div>
+        <iframe class="map reveal" title="키라키라 뷰티스튜디오 위치 지도" src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EB%8F%99%EA%B5%AC%20%EC%A4%91%EC%95%99%EB%A1%9C1261%EB%B2%88%EA%B8%B8%2017&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <img class="logo" src="kk-logo.webp" alt="KIRAKIRA" width="361" height="390" loading="lazy" />
+    <p>키라키라 뷰티스튜디오 · 경기 고양시 일산동구 <span class="nw">중앙로1261번길 17</span> 206호 · <a href="tel:050714387565" class="nw">0507-1438-7565</a></p>
+    <p><a href="https://www.instagram.com/kirakira._official/" target="_blank" rel="noopener">@kirakira._official</a> · <a href="https://m.place.naver.com/place/2097671533/home" target="_blank" rel="noopener">네이버 플레이스</a></p>
+    <p>© KIRAKIRA TOTAL BEAUTY STUDIO</p>
+  </div>
+</footer>
+
+<nav class="quick" aria-label="빠른 연결">
+  <a class="fill" href="https://m.place.naver.com/place/2097671533/ticket" target="_blank" rel="noopener">네이버 예약</a>
+  <a href="tel:050714387565">전화</a>
+  <a href="https://www.instagram.com/kirakira._official/" target="_blank" rel="noopener">인스타 DM</a>
+</nav>
+
+<script>
+(function(){
+  var pending=[].slice.call(document.querySelectorAll('.reveal'));
+  pending.forEach(function(el){
+    var sib=[].slice.call(el.parentNode.children).filter(function(c){ return c.classList.contains('reveal'); });
+    if(sib.length>1){ el.style.setProperty('--d',(Math.min(sib.indexOf(el),5)*0.07)+'s'); }
+  });
+  function showAll(){ pending.forEach(function(el){ el.classList.add('in'); }); pending=[]; }
+  function start(){
+    var t=setInterval(function(){
+      if(!pending.length){ clearInterval(t); return; }
+      if(window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4){ showAll(); return; }
+      var line=window.innerHeight*0.92;
+      pending=pending.filter(function(el){
+        if(el.getBoundingClientRect().top < line){ el.classList.add('in'); return false; }
+        return true;
+      });
+    },120);
+  }
+  var started=false; function go(){ if(started) return; started=true; start(); }
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(go); }
+  setTimeout(go,1200);
+})();
+</script>
+</body>
+</html>
