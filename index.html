@@ -168,7 +168,7 @@ h2{ font-weight:600; font-size:clamp(1.55rem, 4.4vw, 2.3rem); line-height:1.4; l
 .howto b{ font-weight:600; }
 .howto ol{ list-style:none; counter-reset:h; display:grid; gap:6px; margin-top:12px; }
 .howto li{ counter-increment:h; display:flex; gap:10px; }
-.howto li::before{ content:counter(h); font-family:var(--display); color:var(--acc); min-width:1.2em; }
+.howto li::before{ content:counter(h); font-family:var(--display); font-variant-numeric:lining-nums; color:var(--acc); min-width:1.2em; }
 .howto p{ margin-top:12px; color:var(--soft); }
 .howto a{ color:var(--ink); text-underline-offset:3px; }
 @media (min-width:900px){ .howto ol{ grid-template-columns:repeat(4, minmax(0,1fr)); } }
@@ -210,7 +210,7 @@ h2{ font-weight:600; font-size:clamp(1.55rem, 4.4vw, 2.3rem); line-height:1.4; l
 
 <header class="top">
   <div class="wrap bar">
-    <a class="brand" href="#top" aria-label="키라키라 처음으로"><span class="star" aria-hidden="true"></span><b>KIRAKIRA</b></a>
+    <a class="brand" href="#top" aria-label="KIRAKIRA 처음으로"><span class="star" aria-hidden="true"></span><b>KIRAKIRA</b></a>
     <nav class="nav" aria-label="섹션">
       <a href="#promise">소개</a>
       <a href="#nail">네일</a>
